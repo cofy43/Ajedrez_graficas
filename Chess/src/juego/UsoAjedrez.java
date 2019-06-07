@@ -54,8 +54,13 @@ public class UsoAjedrez{
 		System.out.println("2) lista de posiciones");
 		System.out.println("3) Sali");
 	}
-
+	
 	public void run(){
+	}
+	
+	public static void main(String[] args) {
+		UsoAjedrez in = new UsoAjedrez();
+		in.run();
 		System.out.println("***Este es un programa que dada una***");
 		System.out.println("*****pieza te indica los posibles ***");
 		System.out.println("************movinientos**************");
@@ -65,16 +70,16 @@ public class UsoAjedrez{
 		int opc;
 		boolean esValida;
 		while (con){
-			imprimeMenu();
-			int op = leerOpcion("Selecciona una opcion");
+			in.imprimeMenu();
+			int op = in.leerOpcion("Selecciona una opcion");
 			switch (op){
 				case 1 :
-					menuPieza();	
-					opc = leerOpcion("Selecciona una opcion");
+					in.menuPieza();	
+					opc = in.leerOpcion("Selecciona una opcion");
 					switch (opc){
 						case 1:
-							columna = leerOpcionChar("Selecciona una columna [a-h]");
-							renglon = leerOpcion("Selecciona un renglon [1-8]");
+							columna = in.leerOpcionChar("Selecciona una columna [a-h]");
+							renglon = in.leerOpcion("Selecciona un renglon [1-8]");
 							System.out.print("La posicion de la pieza ");
 							System.out.println(" es valida");
 							break;
@@ -89,12 +94,12 @@ public class UsoAjedrez{
 					}	
 					break;
 				case 2 :
-					menuPieza();	
-					opc = leerOpcion("Selecciona una opcion");
+					in.menuPieza();	
+					opc = in.leerOpcion("Selecciona una opcion");
 					switch (opc){
 						case 1:
-							columna = leerOpcionChar("Selecciona una columna [a-h]");
-							renglon = leerOpcion("Selecciona un renglon [1-8]");
+							columna = in.leerOpcionChar("Selecciona una columna [a-h]");
+							renglon = in.leerOpcion("Selecciona un renglon [1-8]");
 							System.out.print("La posicion de la pieza ");
 							System.out.println(" es valida");
 							break;
@@ -109,12 +114,12 @@ public class UsoAjedrez{
 					}	
 					break;
 				case 3 :
-					menuPieza();	
-					opc = leerOpcion("Selecciona una opcion");
+					in.menuPieza();	
+					opc = in.leerOpcion("Selecciona una opcion");
 					switch (opc){
 						case 1:
-							columna = leerOpcionChar("Selecciona una columna [a-h]");
-							renglon = leerOpcion("Selecciona un renglon [1-8]");
+							columna = in.leerOpcionChar("Selecciona una columna [a-h]");
+							renglon = in.leerOpcion("Selecciona un renglon [1-8]");
 							System.out.print("La posicion de la pieza ");
 							System.out.println(" es valida");
 							break;
@@ -129,16 +134,11 @@ public class UsoAjedrez{
 					}	
 					break;
 				case 4:
-                    con = false;
-                    break;
+					con = false;
+					break;
 				default:
 					System.out.println("Opcion invalida");
 			}
 		}
 	}
-	
-/* 	public static void main(String[] args) {
-		UsoAjedrez in = new UsoAjedrez();
-		in.run();
-	} */
 }

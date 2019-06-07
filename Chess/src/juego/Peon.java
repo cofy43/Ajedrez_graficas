@@ -34,6 +34,18 @@ public class Peon extends Pieza {
         
 	}
 
+	/**
+	 * Método encargado de verificar que el movimiento del usuario se encuentra dentro
+	 * de la lista de posible movimientos de la pieza.
+	 * @param renglon 
+	 * @param columna
+	 * @return Vertdadero em caso de de que se encuentre, falso en caso contrario.
+	 */
+	@Override
+	public boolean contiene(int renglon, char columna) {
+		return this.posiblesMovimiento.contains(new Tupla(renglon, columna));
+	}
+
 	@Override
 	public String toString(){
 		String s = "Peon: \n";
