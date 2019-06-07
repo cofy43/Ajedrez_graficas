@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Tablero",
+            "request": "launch",
+            "mainClass": "src.juego.Tablero",
+            "projectName": "Chess_37b6701"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Posicion",
+            "request": "launch",
+            "mainClass": "src.juego.Posicion",
+            "projectName": "Chess_37b6701"
+        }
+    ]
+}
